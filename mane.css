@@ -296,6 +296,10 @@ footer {
 
 .stamp { position: absolute; top: 45px; right: 10px; transform: rotate(30deg); height: 125px; width: auto; }
 
+.oslogo {
+	height: 16px;
+}
+
 #bpm article h1 .small {
   display: none;
 }
