@@ -125,20 +125,6 @@ header h2 {
 section article {
 	padding: 0 1.5em;
 }
-#talk article {
-	text-align: center;
-	margin: 0 auto;
-	max-width: 650px;
-}
-#talk {
-	background: #222;
-}
-#talk h2 {
-	padding-top: 0.5em;
-}
-#rules {
-}
-
 #rules h1 {
 	margin: 0;
 	padding-top: 0.5em;
@@ -149,6 +135,7 @@ section article {
 	max-width: 1024px;
 }
 #bpm {
+	background: #222;
   overflow: hidden;
 }
 #bpm h1 {
