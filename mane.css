@@ -146,6 +146,12 @@ section article {
 	margin: 0 auto;
 	max-width: 800px;
 }
+#bpm .button img{
+  transform:translateY(2px);
+}
+#bpm .button img:first-child{
+  margin-left:20px;
+}
 #sb {
 	background: #009D91;
 	color: #FFF;
