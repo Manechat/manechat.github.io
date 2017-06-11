@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 
-<!--
-	These guidelines are collectively decided upon by the "Princesses" and "Night Guard" of the Discord server
-	with the intent of supporting a clean, open space for everypony to have fun with fellow bronies without inviting hostilities or "4chan-like" internet culture.
--->
-
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -12,7 +7,6 @@
   
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<meta name="description" content="Manechat Discord Server Homepage" />
-	<meta name="copyright" content="Copyright (c)2015 Midnight Aegis" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
 	
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
@@ -20,6 +14,8 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="mane.css">
 	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
 	<script type="text/javascript">
 		document.addEventListener('DOMContentLoaded', function() {
 			var releasesUrl = 'https://api.github.com/repos/ByzantineFailure/BPM-for-Discord/releases';
@@ -72,9 +68,14 @@
 			<h2>My Little Pony Discord Server</h2>
 		</article>
 		<br/>
-		<div class="button green"><a href="https://discord.gg/j69KjmA">Click Here to Join!</a></div>
+		<div class="button green" id="join-button">Click Here to Join!</div>
         <div class="button blue"><a href="#bpm">Get BPM (BetterPonyMotes)</a></div>
 	</header>
+
+	<div class="modal">
+      I hereby confirm to have read the rules and will follow them. I am also aware that not doing so might result in a permanent ban from the server.
+        <a href="https://discord.gg/j69KjmA" class="modal-link">JOIN</a>
+    </div>
 
 	<section id="rules">
 	<article>
@@ -200,5 +201,3 @@
 	
 </body>
 </html>
-
-<!-- [](/sbstare) FlutterDash is best pony. -->

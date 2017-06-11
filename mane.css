@@ -49,6 +49,7 @@ nav {
 	left: 0;
 	top: 0;
 	right: 0;
+	transition:500ms;
 }
 
 nav ul {
@@ -98,6 +99,7 @@ header {
 	padding: 1em 0 0 0;
 	text-align: center;
 	background: #637BC7 url('img/discordlogo_mod.svg') bottom right no-repeat;
+	transition:500ms;
 }
 header article img {
 	position: absolute;
@@ -122,8 +124,16 @@ header h2 {
 	margin: 0 0 0 230px;
 	font-family: Whitney,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
 }
+section{
+	transition:500ms;
+}
 section article {
 	padding: 0 1.5em;
+}
+#join-button{
+	padding:0.5em 1em;
+	font-weight:bold;
+	cursor:pointer;
 }
 #rules h1 {
 	margin: 0;
@@ -221,6 +231,49 @@ footer {
 	text-align: center;
 	background: #26292e;
 	padding: 1em 0;	
+	transition:500ms;
+}
+
+.modal{
+  visibility:hidden;
+  z-index:100;
+  position:fixed;
+  overflow: hidden;
+  width:80%;
+  max-width:500px;
+  top:110%;
+  left:50%;
+  transform:translateX(-50%);
+  padding:4vmin 4vmin 0 4vmin;
+  background:rgba(0,0,0,0.66);
+  box-shadow:0 3px 20px rgba(0,0,0,0.25);
+  border-radius:25px;
+  text-align:justify;
+  transition:500ms;
+}
+.modal-show{
+  visibility:visible;
+  top:50%;
+  transform:translateX(-50%)translateY(-50%);
+}
+.modal-link{
+  box-sizing: border-box;
+  width:120%;
+  margin-left:-10%;
+  margin-top:4vmin;
+  padding:2vmin;
+  background:rgba(255,255,255,0.1);
+  font-family: 'Roboto', sans-serif;
+  font-size:200%;
+  font-weight:100;
+  color:white;
+  text-decoration:none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-link:hover{
+  background:rgba(255,255,255,0.125);
 }
 
 .button {
@@ -286,6 +339,7 @@ footer {
 .cyan:active {
   background: #27556C;
 }
+.blur{filter:blur(20px)}
 
 .stamp { position: absolute; top: 45px; right: 10px; transform: rotate(30deg); height: 125px; width: auto; }
 
@@ -306,6 +360,12 @@ body {
 @media (max-width: 740px) {
 	.stamp {
 		top: 95px;
+	}
+	.modal{
+		max-width:auto;
+	}
+	.modal-link{
+		padding:5vmin;
 	}
 }
 @media (max-width: 630px) {
