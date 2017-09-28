@@ -258,8 +258,8 @@ footer {
 }
 .modal-link{
   box-sizing: border-box;
-  width:120%;
-  margin-left:-10%;
+  width:200%;
+  margin-left:-50%;
   margin-top:4vmin;
   padding:2vmin;
   background:rgba(255,255,255,0.1);
