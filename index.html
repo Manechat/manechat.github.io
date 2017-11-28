@@ -2,254 +2,256 @@
 
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Manechat Discord Server</title>
+    <meta charset="UTF-8">
+    <title>Manechat Discord Server</title>
   
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-	<meta name="description" content="Manechat Discord Server Homepage" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-	
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="mane.css">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="description" content="Manechat Discord Server Homepage" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="mane.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
-	<script type="text/javascript">
-		document.addEventListener('DOMContentLoaded', function() {
-			var releasesUrl = 'https://api.github.com/repos/ByzantineFailure/BPM-for-Discord/releases';
-			var xhr = new XMLHttpRequest();
-			xhr.open('GET', releasesUrl);
-			xhr.onreadystatechange = function() {
-				if(xhr.readyState != 4) return;
-				if(xhr.status !== 200 && xhr.status !== 304) {
-					return;
-				}
-				var response = JSON.parse(xhr.responseText);
-				var release = response
-					.filter(function(release) {
-						return !release.prerelease;
-					})
-					.sort(function(a, b) {
-						var aDate = new Date(a.created_at);
-						var bDate = new Date(b.created_at);
-						if(aDate > bDate) {
-							return -1;
-						} else if (bDate > aDate) {
-							return 1;
-						} else {
-							return 0;
-						}
-					})
-					[0];
-				document.getElementById('discord-for-bpm-link').href = release.html_url;    
-			}
-			xhr.send(null);
-		});
-	</script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var releasesUrl = 'https://api.github.com/repos/ByzantineFailure/BPM-for-Discord/releases';
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', releasesUrl);
+            xhr.onreadystatechange = function() {
+                if(xhr.readyState != 4) return;
+                if(xhr.status !== 200 && xhr.status !== 304) {
+                    return;
+                }
+                var response = JSON.parse(xhr.responseText);
+                var release = response
+                    .filter(function(release) {
+                        return !release.prerelease;
+                    })
+                    .sort(function(a, b) {
+                        var aDate = new Date(a.created_at);
+                        var bDate = new Date(b.created_at);
+                        if(aDate > bDate) {
+                            return -1;
+                        } else if (bDate > aDate) {
+                            return 1;
+                        } else {
+                            return 0;
+                        }
+                    })
+                    [0];
+                document.getElementById('discord-for-bpm-link').href = release.html_url;    
+            }
+            xhr.send(null);
+        });
+    </script>
 </head>
 <body>
-	<nav>
-		<ul>
-			<li id="nav_home"><a href="#home"><i class="material-icons">navigation</i> <p>Home</p></a></li>
-			<li id="nav_rules"><a href="#rules"><i class="material-icons">announcement</i> <p>Rules</p></a></li>
-			<li id="nav_bpm"><a href="#bpm"><i class="material-icons">info_outline</i> <p>BPM</p></a></li>
-			<li id="nav_sb"><a href="#sb"><i class="material-icons">code</i> <p>Sweetiebot</p></a></li>
-			<li id="nav_bronycon"><a href="#bronycon"><i class="material-icons">new_releases</i> <p>Bronycon</p></a></li>
-		</ul>
-	</nav>
-	
-	<header id="home">
-		<article>
-			<img src="img/derpscience-368.png"></img>
-			<div class="discordlogo"></div>
-			<h1>Manechat</h1>
-			<h2>My Little Pony Discord Server</h2>
-		</article>
-		<br/>
-		<div class="button green" id="join-button">Click Here to Join!</div>
+    <nav>
+        <ul>
+            <li id="nav_home"><a href="#home"><i class="material-icons">navigation</i> <p>Home</p></a></li>
+            <li id="nav_rules"><a href="#rules"><i class="material-icons">announcement</i> <p>Rules</p></a></li>
+            <li id="nav_bpm"><a href="#bpm"><i class="material-icons">info_outline</i> <p>BPM</p></a></li>
+            <li id="nav_sb"><a href="#sb"><i class="material-icons">code</i> <p>Sweetiebot</p></a></li>
+            <li id="nav_bronycon"><a href="#bronycon"><i class="material-icons">new_releases</i> <p>Bronycon</p></a></li>
+        </ul>
+    </nav>
+    
+    <header id="home">
+        <article>
+            <img src="img/derpscience-368.png"></img>
+            <div class="discordlogo"></div>
+            <h1>Manechat</h1>
+            <h2>My Little Pony Discord Server</h2>
+        </article>
+        <br/>
+        <div class="button green" id="join-button">Click Here to Join!</div>
         <div class="button blue"><a href="#bpm">Get BPM (BetterPonyMotes)</a></div>
-	</header>
+    </header>
 
-	<div class="modal">
-      I hereby confirm to have read the rules and will follow them. I am also aware that not doing so might result in a permanent ban from the server.
+    <div class="modal">
+        <div class="modal-text">
+            I hereby confirm to have read the rules and will follow them. I am also aware that not doing so might result in a permanent ban from the server.
+        </div>
         <a href="https://discord.gg/hus3hqS" class="modal-link">JOIN</a>
     </div>
 
-	<section id="rules">
-	<article>
-		<h1>Rules</h1>
-		<p>Welcome to Manechat! Keep it family friendly and SFW. Breaking the rules will result in being muted, kicked, or banned. Fundamentally, our rules are mostly the same as the /r/mylittlepony subreddit rules, subject to moderator discretion.</p>
-		
-		<ol>
-			<li>Be pony-like and kind to other members.
-			<ol type="a">
-				<li>Trolling, impersonation, and similar acts are not acceptable!</li>
-				<li>Follow common courtesy in voice chat. Keep it SFW, do not disturb in-progress games with off-topic chatter, and properly calibrate your microphone.</li>
-			</ol>
-			</li>
-			
-			<li>No offensive/controversial/nsfw avatars, pictures, emotes, or topics. This means no politics or religion.
-			<ol type="a">
-				<li>If you believe this rule is being breached, please contact an available princess. Do not take action on your own.</li>
-				<li>Links to other Discord servers must be verified by a Princess as SFW before being posted.</li>
-			</ol>
-			</li>
-			
-			<li>All discussion, pictures, and any related content about the currently airing or next upcoming episode must be kept in the appropriately named spoiler channel until 48 hours after the <strong>end of the episode's Discovery Family airing</strong>, even if it may have leaked earlier. All other spoiler content goes in <span class="channel_name">#mybigspoilers</span>.
-			<ol type="a">
-				<li>Do not carelessly spoil important plot points of any media <strong>in general</strong>, regardless of its age.</li>
-			</ol>
-			</li>
-			
-			<li>Shitposting, spamming, and low-effort memes are prohibited. Don’t use excessive unicode or emoji in usernames or text. Don’t use emotes more than four times as large as the subreddit emotes.</li>
-			<ol type="a">
-				<li>If you believe this rule is being breached, please contact an available princess. Do not take action on your own.</li>
-			</ol>
-			
-			<li>We are not a support group. If you need help, please visit the <a href="https://www.reddit.com/r/mylittlesupportgroup">My Little Support Group subreddit</a>, the <a href="https://
-				
-				
-				/0i3tTVbTo6cyvyPe">My Little Support Group Discord server</a> or contact a local professional in your area.
-				<br/>
-				<a href="https://www.reddit.com/r/SWResources/comments/2dnji0/hotline_numbers/">International List of Crisis Hotlines</a>.
-			</li>
-		</ol>
+    <section id="rules">
+    <article>
+        <h1>Rules</h1>
+        <p>Welcome to Manechat! Keep it family friendly and SFW. Breaking the rules will result in being muted, kicked, or banned. Fundamentally, our rules are mostly the same as the /r/mylittlepony subreddit rules, subject to moderator discretion.</p>
+        
+        <ol>
+            <li>Be pony-like and kind to other members.
+            <ol type="a">
+                <li>Trolling, impersonation, and similar acts are not acceptable!</li>
+                <li>Follow common courtesy in voice chat. Keep it SFW, do not disturb in-progress games with off-topic chatter, and properly calibrate your microphone.</li>
+            </ol>
+            </li>
+            
+            <li>No offensive/controversial/nsfw avatars, pictures, emotes, or topics. This means no politics or religion.
+            <ol type="a">
+                <li>If you believe this rule is being breached, please contact an available princess. Do not take action on your own.</li>
+                <li>Links to other Discord servers must be verified by a Princess as SFW before being posted.</li>
+            </ol>
+            </li>
+            
+            <li>All discussion, pictures, and any related content about the currently airing or next upcoming episode must be kept in the appropriately named spoiler channel until 48 hours after the <strong>end of the episode's Discovery Family airing</strong>, even if it may have leaked earlier. All other spoiler content goes in <span class="channel_name">#mybigspoilers</span>.
+            <ol type="a">
+                <li>Do not carelessly spoil important plot points of any media <strong>in general</strong>, regardless of its age.</li>
+            </ol>
+            </li>
+            
+            <li>Shitposting, spamming, and low-effort memes are prohibited. Don’t use excessive unicode or emoji in usernames or text. Don’t use emotes more than four times as large as the subreddit emotes.</li>
+            <ol type="a">
+                <li>If you believe this rule is being breached, please contact an available princess. Do not take action on your own.</li>
+            </ol>
+            
+            <li>We are not a support group. If you need help, please visit the <a href="https://www.reddit.com/r/mylittlesupportgroup">My Little Support Group subreddit</a>, the <a href="https://
+                
+                
+                /0i3tTVbTo6cyvyPe">My Little Support Group Discord server</a> or contact a local professional in your area.
+                <br/>
+                <a href="https://www.reddit.com/r/SWResources/comments/2dnji0/hotline_numbers/">International List of Crisis Hotlines</a>.
+            </li>
+        </ol>
 
-		<p><strong>All Princess decisions are final.</strong>
-			<ul>
-				<li>Princesses have full discretion to remove content or users deemed unpleasant or unwelcomed by community members.</li>
-				<li>Princesses have full discretion to change channel topics.</li>
-			</ul>
-		</p>
-	
-		<p>Respect <a href="https://discordapp.com/tos">Discord's Terms of Service</a>.</p>
-		
-		<p>Abusing or exploiting bugs in Sweetie Bot or Discord itself is a bannable offense.</p>
-			
-	</article>
-	</section>
+        <p><strong>All Princess decisions are final.</strong>
+            <ul>
+                <li>Princesses have full discretion to remove content or users deemed unpleasant or unwelcomed by community members.</li>
+                <li>Princesses have full discretion to change channel topics.</li>
+            </ul>
+        </p>
+    
+        <p>Respect <a href="https://discordapp.com/tos">Discord's Terms of Service</a>.</p>
+        
+        <p>Abusing or exploiting bugs in Sweetie Bot or Discord itself is a bannable offense.</p>
+            
+    </article>
+    </section>
 
-	<section id="channels">
-	<article>
-		<h1>Channels</h1>
+    <section id="channels">
+    <article>
+        <h1>Channels</h1>
 
-		<p>Certain channels are used for certain activities and discussions. Temporary channels may be created for certain events. <strong>Do not</strong> clutter the general chat with content that belongs somewhere else.<br>
-			<table>
-				<tr><td><span class="channel_name">#manechat</span></td> <td>General discussion.</td> </tr>
-				<tr><td><span class="channel_name">#overflow</span></td> <td>General discussion channel #2 for when #manechat becomes overcrowded.</td> </tr>
-				<tr><td><span class="channel_name">#announcements</span></td> <td>Important server announcements are posted here.</td> </tr>
-				<tr><td><span class="channel_name">#mylittletheory</span></td> <td>Spoiler-free lore, story, theories, and/or criticisms about MLP.</td> </tr>
-				<tr><td><span class="channel_name">#mlpmovie</span></td> <td>Channel dedicated to My Little Pony: The Movie discussions.</td> </tr>
-				<tr><td><span class="channel_name">#mylittlebot</span></td> <td>Play with Sweetie Bot here.</td> </tr>
-				<tr><td><span class="channel_name"># (current airings)</span></td> <td>Spoilers channel to discuss the new or next upcoming episode, and the comics, movies, books, and other media surrounding it.</td> </tr>
-				<tr><td><span class="channel_name">#mybigspoilers</span></td> <td>Any and all spoilers go here, MLP or otherwise. User discretion is advised.</td> </tr>
-				<tr><td><span class="channel_name">#mylittleactivities</span></td> <td>Gaming, Fanfic Reading reactions and TSSSF.</td> </tr>
-				<tr><td><span class="channel_name">#mylittlenerds</span></td> <td>Technical discussions on computer science, math, engineering, and science in general.</td> </tr>
-				<tr><td><span class="channel_name">#mylittlecons</span></td> <td>Convention meetups and discussion.</td> </tr>				
-			</table>
-		</p>
+        <p>Certain channels are used for certain activities and discussions. Temporary channels may be created for certain events. <strong>Do not</strong> clutter the general chat with content that belongs somewhere else.<br>
+            <table>
+                <tr><td><span class="channel_name">#manechat</span></td> <td>General discussion.</td> </tr>
+                <tr><td><span class="channel_name">#overflow</span></td> <td>General discussion channel #2 for when #manechat becomes overcrowded.</td> </tr>
+                <tr><td><span class="channel_name">#announcements</span></td> <td>Important server announcements are posted here.</td> </tr>
+                <tr><td><span class="channel_name">#mylittletheory</span></td> <td>Spoiler-free lore, story, theories, and/or criticisms about MLP.</td> </tr>
+                <tr><td><span class="channel_name">#mlpmovie</span></td> <td>Channel dedicated to My Little Pony: The Movie discussions.</td> </tr>
+                <tr><td><span class="channel_name">#mylittlebot</span></td> <td>Play with Sweetie Bot here.</td> </tr>
+                <tr><td><span class="channel_name"># (current airings)</span></td> <td>Spoilers channel to discuss the new or next upcoming episode, and the comics, movies, books, and other media surrounding it.</td> </tr>
+                <tr><td><span class="channel_name">#mybigspoilers</span></td> <td>Any and all spoilers go here, MLP or otherwise. User discretion is advised.</td> </tr>
+                <tr><td><span class="channel_name">#mylittleactivities</span></td> <td>Gaming, Fanfic Reading reactions and TSSSF.</td> </tr>
+                <tr><td><span class="channel_name">#mylittlenerds</span></td> <td>Technical discussions on computer science, math, engineering, and science in general.</td> </tr>
+                <tr><td><span class="channel_name">#mylittlecons</span></td> <td>Convention meetups and discussion.</td> </tr>              
+            </table>
+        </p>
 
-	</article>
-	</section>
+    </article>
+    </section>
 
-	<section id="groups">
-	<article>
-		<h1>Groups</h1>
+    <section id="groups">
+    <article>
+        <h1>Groups</h1>
 
-		<p>We also have many groups you can join for news, organization of events, and coordination of group play.</p>
-		<p>To join a group, type <code>!joingroup <group></code> in <span class="channel_name">#mylittlebot</span></p>
-		<p>
-			<table>
-				<tr>
-					<td><span class="group_name">Gaming</span></td>
-					<td>Factorio, GTA:O, Hearthstone, HotS, League, Minecraft, osu!, Overwatch, Overwatch NA, Overwatch EU, PUBG, starbound, TF2, themfightingherds, Titanfall, Warframe, WoW</td>
-				</tr>
-				<tr>
-					<td><span class="group_name">Card games</span></td>
-					<td>TSSSF, MLPCCG, MTG</td>
-				</tr>
-				<tr>
-					<td><span class="group_name">Media</span></td>
-					<td>Anime, artist, fanfic, The Daily EG, writers</td>
-				</tr>
-				<tr>
-					<td><span class="group_name">Conventions</span></td>
-					<td>BabsCon, BronyCon, EFNW, FillyCon, GalaCon, NightmareNights</td>
-				</tr>
-				<tr>
-					<td><span class="group_name">Roleplay</span></td>
-					<td>Roleplayers, Ponyfinder, D&amp;D</td>
-				</tr>
-			</table>
-		</p>
-	</article>
-	</section>
-	
-	<section id="bpm">
-	<article>
-		<h1><span class="large">BetterPonyMotes</span><span class="small">BPM</span> for Discord</h1>
-		
-		<img src="img/scootacheer.png" alt="" style="float: right; margin-left: 1em;" />
-		<p>BetterPonyMotes (BPM) allows you to see ponymotes in the chat. If you installed Discord onto your computer, you want the <strong>desktop client</strong> version. If you're using Discord through a web browser, you want the <strong>web browser</strong> extension. The instructions for each of these are found below.</p>
+        <p>We also have many groups you can join for news, organization of events, and coordination of group play.</p>
+        <p>To join a group, type <code>!joingroup <group></code> in <span class="channel_name">#mylittlebot</span></p>
+        <p>
+            <table>
+                <tr>
+                    <td><span class="group_name">Gaming</span></td>
+                    <td>Factorio, GTA:O, Hearthstone, HotS, League, Minecraft, osu!, Overwatch, Overwatch NA, Overwatch EU, PUBG, starbound, TF2, themfightingherds, Titanfall, Warframe, WoW</td>
+                </tr>
+                <tr>
+                    <td><span class="group_name">Card games</span></td>
+                    <td>TSSSF, MLPCCG, MTG</td>
+                </tr>
+                <tr>
+                    <td><span class="group_name">Media</span></td>
+                    <td>Anime, artist, fanfic, The Daily EG, writers</td>
+                </tr>
+                <tr>
+                    <td><span class="group_name">Conventions</span></td>
+                    <td>BabsCon, BronyCon, EFNW, FillyCon, GalaCon, NightmareNights</td>
+                </tr>
+                <tr>
+                    <td><span class="group_name">Roleplay</span></td>
+                    <td>Roleplayers, Ponyfinder, D&amp;D</td>
+                </tr>
+            </table>
+        </p>
+    </article>
+    </section>
+    
+    <section id="bpm">
+    <article>
+        <h1><span class="large">BetterPonyMotes</span><span class="small">BPM</span> for Discord</h1>
+        
+        <img src="img/scootacheer.png" alt="" style="float: right; margin-left: 1em;" />
+        <p>BetterPonyMotes (BPM) allows you to see ponymotes in the chat. If you installed Discord onto your computer, you want the <strong>desktop client</strong> version. If you're using Discord through a web browser, you want the <strong>web browser</strong> extension. The instructions for each of these are found below.</p>
 
-		<p>Unfortunately, BPM is not available for mobile devices (iOS or Android).</p>
+        <p>Unfortunately, BPM is not available for mobile devices (iOS or Android).</p>
 
-		<h2>Desktop Client</h2>
-		<div class="button blue"><a href="https://github.com/deltaphc/DiscordBPMToolkit/releases/download/v16.10.22/DiscordBPMToolkit.exe">Auto Installer<img src="img/winlogo.svg" class="oslogo" /></a></div>
-		<div class="button blue"><a href="https://github.com/ByzantineFailure/BPM-for-Discord/releases/latest">Manual Installer<img src="img/winlogo.svg" class="oslogo" /><img src="img/maclogo.svg" class="oslogo" /><img src="img/linuxlogo.svg" class="oslogo" /></a></div>
-		<p>The easiest way to install BPM for the desktop client is to use the installer above. However, if the installer does not appear to work for you (and you're sure you've restarted Discord like it asks), or you're not using Windows, then you can follow the steps below to install BPM manually.</p>
-		<ul>
-			<li>Download and extract <a id="discord-for-bpm-link" href="https://github.com/ByzantineFailure/BPM-for-Discord/releases/latest">this 7zip archive (bottom of the page)</a>, which contains the BPM mod for Discord.</li>
-			<li>For instructions on how to install the mod, follow the visual guide shown on <a href="https://goo.gl/2I2R1B">this gif</a> or simply unzip the pack and read the README provided.</li>
-		</ul>
+        <h2>Desktop Client</h2>
+        <div class="button blue"><a href="https://github.com/deltaphc/DiscordBPMToolkit/releases/download/v16.10.22/DiscordBPMToolkit.exe">Auto Installer<img src="img/winlogo.svg" class="oslogo" /></a></div>
+        <div class="button blue"><a href="https://github.com/ByzantineFailure/BPM-for-Discord/releases/latest">Manual Installer<img src="img/winlogo.svg" class="oslogo" /><img src="img/maclogo.svg" class="oslogo" /><img src="img/linuxlogo.svg" class="oslogo" /></a></div>
+        <p>The easiest way to install BPM for the desktop client is to use the installer above. However, if the installer does not appear to work for you (and you're sure you've restarted Discord like it asks), or you're not using Windows, then you can follow the steps below to install BPM manually.</p>
+        <ul>
+            <li>Download and extract <a id="discord-for-bpm-link" href="https://github.com/ByzantineFailure/BPM-for-Discord/releases/latest">this 7zip archive (bottom of the page)</a>, which contains the BPM mod for Discord.</li>
+            <li>For instructions on how to install the mod, follow the visual guide shown on <a href="https://goo.gl/2I2R1B">this gif</a> or simply unzip the pack and read the README provided.</li>
+        </ul>
         <p>If you followed these instructions but still need further assistance, feel free to ask members of the server.</p>
-		<p><small>The installer is open-source under the GNU GPLv3 license. <a href="https://github.com/deltaphc/DiscordBPMToolkit">Source on GitHub</a>.</small></p>
-		
-		<h2>Web Browser</h2>
-		<ul>
-			<li>Install the BPM extension from the <a href="https://ponymotes.net/bpm/">official website</a>, if you do not have it already.</li>
-			<li>For ponymotes to show in the web (Browser) client of Discord, follow the visual guide shown on <a href="https://goo.gl/ru3LZ7">this gif</a> or see below for the written instructions.
-			<ol>
-				<li>Go to Settings of your web browser.</li>
-				<li>Go to the Extensions tab.</li>
-				<li>Click options under the BPM extension.</li>
-				<li>Scroll down and check the boxes that 'Convert emotes outside of Reddit' and 'Show the emote search globally'.</li>
-  			</ol>
-  			</li>
-  		</ul>
-	</article>
-	</section>
-	
-	<section id="sb">
-	<article>
-	<span>
-		<img src="img/sweetiebot.svg" alt="Avatar" title="Sweetie Bot" style="height:180px;width:180px;" />
-		<h1>Sweetie <span>bot</span></h1>
-		<div class="pad">An open source administration bot for the Manechat discord channel, now available for your own server!
-			<br/>
-			<div class="button cyan"><a href="https://discordapp.com/oauth2/authorize?client_id=171790139712864257&scope=bot&permissions=0">Add To Server</a></div>
-			<div class="button blue" style="background: #477286 url('img/github.png') 5px 5px no-repeat;padding-left:35px;"><a href="https://github.com/blackhole12/sweetiebot#readme">View Readme</a></div>
-		</div>
-	</span>
-	</article>
-	</section>
-	
-	<section id="bronycon">
-	<article>
-		<img src="img/bc16panelist.png" class="stamp" alt="Bronycon Panelist" />
-		<h1>Manechat @ Bronycon!</h1>
-		<p>Cloud Hop and PotluckPony hosted <a href="http://2016.bronycon.org/events/schedule/">Creating and Moderating Online Communities</a> at BronyCon 2016!</p>
-		<p>If you missed out on the fun, you can <a href="https://www.youtube.com/watch?v=6EGm6xqMtTo">view the official recording of the panel</a>!</p>
-	</article>
-	</section>
-	
-	<footer>
-		<p>Last updated: November 13, 2017</p>
-		<p>Design by: <a href="https://github.com/blackhole12/">Cloud Hop</a>, <a href="https://github.com/deltaphc">DeltaPHC</a></p>
-	</footer>
-	
+        <p><small>The installer is open-source under the GNU GPLv3 license. <a href="https://github.com/deltaphc/DiscordBPMToolkit">Source on GitHub</a>.</small></p>
+        
+        <h2>Web Browser</h2>
+        <ul>
+            <li>Install the BPM extension from the <a href="https://ponymotes.net/bpm/">official website</a>, if you do not have it already.</li>
+            <li>For ponymotes to show in the web (Browser) client of Discord, follow the visual guide shown on <a href="https://goo.gl/ru3LZ7">this gif</a> or see below for the written instructions.
+            <ol>
+                <li>Go to Settings of your web browser.</li>
+                <li>Go to the Extensions tab.</li>
+                <li>Click options under the BPM extension.</li>
+                <li>Scroll down and check the boxes that 'Convert emotes outside of Reddit' and 'Show the emote search globally'.</li>
+            </ol>
+            </li>
+        </ul>
+    </article>
+    </section>
+    
+    <section id="sb">
+    <article>
+    <span>
+        <img src="img/sweetiebot.svg" alt="Avatar" title="Sweetie Bot" style="height:180px;width:180px;" />
+        <h1>Sweetie <span>bot</span></h1>
+        <div class="pad">An open source administration bot for the Manechat discord channel, now available for your own server!
+            <br/>
+            <div class="button cyan"><a href="https://discordapp.com/oauth2/authorize?client_id=171790139712864257&scope=bot&permissions=0">Add To Server</a></div>
+            <div class="button blue" style="background: #477286 url('img/github.png') 5px 5px no-repeat;padding-left:35px;"><a href="https://github.com/blackhole12/sweetiebot#readme">View Readme</a></div>
+        </div>
+    </span>
+    </article>
+    </section>
+    
+    <section id="bronycon">
+    <article>
+        <img src="img/bc16panelist.png" class="stamp" alt="Bronycon Panelist" />
+        <h1>Manechat @ Bronycon!</h1>
+        <p>Cloud Hop and PotluckPony hosted <a href="http://2016.bronycon.org/events/schedule/">Creating and Moderating Online Communities</a> at BronyCon 2016!</p>
+        <p>If you missed out on the fun, you can <a href="https://www.youtube.com/watch?v=6EGm6xqMtTo">view the official recording of the panel</a>!</p>
+    </article>
+    </section>
+    
+    <footer>
+        <p>Last updated: November 13, 2017</p>
+        <p>Design by: <a href="https://github.com/blackhole12/">Cloud Hop</a>, <a href="https://github.com/deltaphc">DeltaPHC</a></p>
+    </footer>
+    
 </body>
 </html>
 
