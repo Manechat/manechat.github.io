@@ -40,6 +40,12 @@ article ol li ol {
 .channel_name {
 	background-color: rgba(0, 0, 0, 0.1);
 	color: #6c8bd7;
+	white-space: nowrap;
+}
+.group_name{
+	background-color: rgba(0, 0, 0, 0.1);
+	color:#9575CD;
+	white-space: nowrap;
 }
 
 nav {
@@ -130,6 +136,9 @@ section{
 section article {
 	padding: 0 1.5em;
 }
+table tr td:first-child{
+	padding: 0 20px 0 0;
+}
 #join-button{
 	padding:0.5em 1em;
 	font-weight:bold;
@@ -140,9 +149,13 @@ section article {
 	padding-top: 0.5em;
 	font-size: 3rem;
 }
-#rules article {
+#rules article, #channels article, #groups article {
 	margin: 0 auto;
 	max-width: 1024px;
+}
+#channels h1, #groups h1{
+	margin: 0;
+	font-size: 3rem;
 }
 #bpm {
 	background: #222;
@@ -197,8 +210,8 @@ section article {
 	height: auto;
 	width: 180px;
 	border-radius: 104px;
-	border: 4px solid #4CFF7C;
-	Left: 16px;
+	border: 4px solid #A47BB4;
+	left: 16px;
 }
 #sb article .pad {
 	margin-left: 230px;
