@@ -55,7 +55,6 @@ nav {
     left: 0;
     top: 0;
     right: 0;
-    transition:500ms;
 }
 
 nav ul {
@@ -105,7 +104,6 @@ header {
     padding: 1em 0 0 0;
     text-align: center;
     background: #637BC7 url('img/discordlogo_mod.svg') bottom right no-repeat;
-    transition:500ms;
 }
 header article img {
     position: absolute;
@@ -129,9 +127,6 @@ header h1 {
 header h2 {
     margin: 0 0 0 230px;
     font-family: Whitney,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
-}
-section{
-    transition:500ms;
 }
 section article {
     padding: 0 1.5em;
@@ -244,7 +239,6 @@ footer {
     text-align: center;
     background: #26292e;
     padding: 1em 0; 
-    transition:500ms;
 }
 
 .modal{
