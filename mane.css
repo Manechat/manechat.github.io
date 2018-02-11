@@ -292,6 +292,12 @@ footer {
     transition: all 300ms;
 }
 
+.button i {
+    line-height: 0.5em;
+    vertical-align: middle;
+    cursor: default;
+}
+
 .button:hover {
     box-shadow: 0px 2px 10px #111;
   
