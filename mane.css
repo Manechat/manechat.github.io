@@ -2,7 +2,7 @@
    By: Cloud Hop (and maybe DeltaPHC) */
 
 body {
-    background: #36393e url('img/rdsalute_bg.png') fixed right bottom no-repeat;
+    background: #36393e;
     color: #f0f0f0;
     margin: 2rem 0 0 0;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
@@ -139,18 +139,33 @@ table tr td:first-child{
     font-weight:bold;
     cursor:pointer;
 }
-#rules h1 {
+#rules {
+    background: #36393e url('img/rdsalute_bg.png') right bottom no-repeat;
+    overflow: hidden;
+}
+#rules h1, #info h1 {
     margin: 0;
     padding-top: 0.5em;
     font-size: 3rem;
 }
-#rules article, #channels article, #groups article {
+#rules article, #info article {
     margin: 0 auto;
     max-width: 1024px;
 }
-#channels h1, #groups h1{
+#info {
+    background: #333;
+    overflow: hidden;
+}
+#info h2 {
     margin: 0;
-    font-size: 3rem;
+    padding-top: 0.25em;
+    font-size: 2rem;
+}
+#info > article {
+    display: flex;
+}
+#info > article > article.infocolumn {
+    font-size: 0.9rem;
 }
 #bpm {
     background: #222;
