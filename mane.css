@@ -216,12 +216,11 @@ table tr td:first-child{
     line-height: 120%;
 }
 #sb article span img {
-    position: absolute;
+    float: left;
     height: auto;
     width: 180px;
     border-radius: 104px;
     border: 4px solid #A47BB4;
-    left: 16px;
 }
 #sb article .pad {
     margin-left: 230px;
@@ -230,11 +229,12 @@ table tr td:first-child{
     margin-top: 1em;
     margin-left: 3em;
 }
-#bronycon {
-    background: #5A3791;
+#reddit {
+    background: #cee3f8;
+    color: #111;
     overflow: hidden;
 }
-#bronycon article {
+#reddit article {
     position: relative;
     padding: 1em 1.5em;
     max-width: 800px;
@@ -242,12 +242,14 @@ table tr td:first-child{
     font-size: 1.1rem;
     font-weight: 600;
 }
-#bronycon article p {
-    padding-right: 9rem;
-}
-#bronycon article h1 {
+#reddit article h1 {
     font-size: 2.9rem;
     margin: 0;
+    text-align: center;
+}
+#reddit article img {
+    float: right;
+    margin: 0 1em 1em 0;
 }
 footer {
     font-size: 0.75rem;
@@ -369,8 +371,6 @@ footer {
 }
 .blur{filter:blur(20px)}
 
-.stamp { position: absolute; top: 45px; right: 10px; transform: rotate(30deg); height: 125px; width: auto; }
-
 .oslogo {
     height: 16px;
     margin-left: 4px;
@@ -381,74 +381,68 @@ footer {
     display: none;
 }
 @media (max-width: 1500px) {
-body {
-    background-image: none;
-}
+    body {
+        background-image: none;
+    }
 }
 @media (max-width: 740px) {
-    .stamp {
-        top: 95px;
-    }
-    .modal{
+    .modal {
         max-width:auto;
     }
-    .modal-link{
+    .modal-link {
         padding:5vmin;
     }
 }
 @media (max-width: 630px) {
-  header article {
-    text-align:center;
-  }
-  header article img {
-    position:relative;
-  }
-  header h1 {
-    padding: 0;
-    margin: 0;
-  }
-  header h2 {
-    margin: 0;
-  }
-  header .green {
-    margin-top: 1em;
-  }
+    header article {
+        text-align:center;
+    }
+    header article img {
+        position:relative;
+    }
+    header h1 {
+        padding: 0;
+        margin: 0;
+    }
+    header h2 {
+        margin: 0;
+    }
+    header .green {
+        margin-top: 1em;
+    }
 
-  nav ul li {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-  nav ul p {
-    display: none;
-  }
+    nav ul li {
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    nav ul p {
+        display: none;
+    }
 }
 @media (max-width: 560px) {
     #sb article .pad div {
         margin-left: 0;
     }
-  #sb article .pad {
-    margin-left: 0;
-  }
-  #sb article h1 {
-    text-align: center;
-    margin-left: 0;
-  }
-  #sb article {
-    text-align:center;
-  }
-  #sb article span img {
-    position:relative;
-    left: 0;
-  }
+    #sb article .pad {
+        margin-left: 0;
+    }
+    #sb article h1 {
+        text-align: center;
+        margin-left: 0;
+    }
+    #sb article {
+        text-align:center;
+    }
+    #sb article span img {
+        position:relative;
+        left: 0;
+    }
 }
 @media (max-width: 440px) {
-    .stamp {
-        top: 10rem;
+    #bpm article h1 .small {
+        display: inline;
     }
-#bpm article h1 .small {
-  display: inline;
-}
-#bpm article h1 .large {
-  display: none;
-}
+    #bpm article h1 .large {
+        display: none;
+    }
 }
