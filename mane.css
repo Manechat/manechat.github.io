@@ -153,7 +153,7 @@ table tr td:first-child{
     max-width: 1024px;
 }
 #info {
-    background: #333;
+    background: #333 url('img/twismile_bg.png') right bottom no-repeat;
     overflow: hidden;
 }
 #info h2 {
