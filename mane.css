@@ -155,7 +155,7 @@ table tr td:first-child{
     max-width: 1024px;
 }
 #info {
-    background: #333 url('img/twismile_bg.png') 75% bottom no-repeat;
+    background: #333;
     overflow: hidden;
 }
 #info h2 {
@@ -164,6 +164,7 @@ table tr td:first-child{
     font-size: 2rem;
 }
 #info > article {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
@@ -171,6 +172,11 @@ table tr td:first-child{
 #info > article > h1{
     flex-basis: 100%;
     padding: 24px 1.5rem 0 1.5rem;
+}
+#info > article > img{
+    position: absolute;
+    bottom: -10px;
+    left: calc(50% + 300px);
 }
 #info > article > article.infocolumn {
     width: 50%;
@@ -402,14 +408,32 @@ footer {
 #bpm article h1 .small {
     display: none;
 }
+
+.slide{
+    animation-name: slide;
+    animation-duration: 4s;
+}
+
+@keyframes slide{
+  0%  {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  5%  {transform:scaleX(1);left: calc(50% + 300px);bottom: 0px;}
+  10% {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  15% {transform:scaleX(1);left: calc(50% + 300px);bottom: 0px;}
+  20% {transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;}
+  50% {transform:scaleX(1);left: calc(50%);bottom: -10px;;}
+  60% {transform:scaleX(-1);left: calc(50%);bottom: -10px;;}
+  90% {transform:scaleX(-1);left: calc(50% + 300px);bottom: -10px;;}
+  100%{transform:scaleX(1);left: calc(50% + 300px);bottom: -10px;;}
+}
+
 @media (max-width: 1500px) {
     body {
         background-image: none;
     }
 }
 @media (max-width: 1000px) {
-    #info {
-        background: #333;
+    #twismile {
+        display: none;
     }
     #info > article > article.infocolumn {
         width: initial;
