@@ -2,7 +2,7 @@
    By: Cloud Hop (and maybe DeltaPHC) */
 
 body {
-    background: #36393e;
+    background: #36393e url('img/rdsalute_bg.png') fixed right bottom no-repeat;
     color: #f0f0f0;
     margin: 2rem 0 0 0;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
@@ -22,6 +22,9 @@ a:hover {
 
 a:visited {
     color: #99b;
+}
+article{
+    box-sizing: border-box;
 }
 article ol, article ul {
     margin: 0;
@@ -140,7 +143,6 @@ table tr td:first-child{
     cursor:pointer;
 }
 #rules {
-    background: #36393e url('img/rdsalute_bg.png') right bottom no-repeat;
     overflow: hidden;
 }
 #rules h1, #info h1 {
@@ -153,7 +155,7 @@ table tr td:first-child{
     max-width: 1024px;
 }
 #info {
-    background: #333 url('img/twismile_bg.png') right bottom no-repeat;
+    background: #333 url('img/twismile_bg.png') 75% bottom no-repeat;
     overflow: hidden;
 }
 #info h2 {
@@ -163,9 +165,19 @@ table tr td:first-child{
 }
 #info > article {
     display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+#info > article > h1{
+    flex-basis: 100%;
+    padding: 24px 1.5rem 0 1.5rem;
 }
 #info > article > article.infocolumn {
-    font-size: 0.9rem;
+    width: 50%;
+}
+
+article.infocolumn > table > tbody > tr > td:nth-child(2){
+    font-size: 0.8rem;
 }
 #bpm {
     background: #222;
@@ -189,7 +201,8 @@ table tr td:first-child{
     background: #009D91;
     color: #FFF;
 }
-#sb article {
+#sb article, #reddit article{
+    position: relative;
     margin: 0 auto;
     max-width: 800px;
     font-size: 1.1rem;
@@ -216,11 +229,12 @@ table tr td:first-child{
     line-height: 120%;
 }
 #sb article span img {
-    float: left;
+    position: absolute;
     height: auto;
     width: 180px;
     border-radius: 104px;
     border: 4px solid #A47BB4;
+    left: 18px;
 }
 #sb article .pad {
     margin-left: 230px;
@@ -229,18 +243,16 @@ table tr td:first-child{
     margin-top: 1em;
     margin-left: 3em;
 }
+
 #reddit {
+    position: relative;
+    z-index: 10;
     background: #cee3f8;
     color: #111;
-    overflow: hidden;
 }
-#reddit article {
-    position: relative;
-    padding: 1em 1.5em;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1.1rem;
-    font-weight: 600;
+#reddit article{
+    display: flex;
+    padding: 1em 0;
 }
 #reddit article h1 {
     font-size: 2.9rem;
@@ -248,9 +260,19 @@ table tr td:first-child{
     text-align: center;
 }
 #reddit article img {
-    float: right;
-    margin: 0 1em 1em 0;
+    height: 180px;
+    width: auto;
 }
+#reddit article .pad{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 18px;
+}
+#reddit a:link {
+    color: #7D96CC;
+}
+
 footer {
     font-size: 0.75rem;
     text-align: center;
@@ -385,12 +407,29 @@ footer {
         background-image: none;
     }
 }
+@media (max-width: 1000px) {
+    #info {
+        background: #333;
+    }
+    #info > article > article.infocolumn {
+        width: initial;
+    }
+}
 @media (max-width: 740px) {
     .modal {
         max-width:auto;
     }
     .modal-link {
         padding:5vmin;
+    }
+    #reddit article img{
+        z-index: -1;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 120px;
+        opacity: 0.2;
+        pointer-events: none;
     }
 }
 @media (max-width: 630px) {
@@ -436,6 +475,9 @@ footer {
     #sb article span img {
         position:relative;
         left: 0;
+    }
+    #reddit article h1 {
+        font-size: 2rem;
     }
 }
 @media (max-width: 440px) {
