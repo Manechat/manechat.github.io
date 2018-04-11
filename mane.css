@@ -4,7 +4,7 @@
 body {
     background: #36393e url('img/rdsalute_bg.png') fixed right bottom no-repeat;
     color: #f0f0f0;
-    margin: 2rem 0 0 0;
+    margin: 0;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     min-width: 360px;
     font-size: 16px;
@@ -104,7 +104,7 @@ nav ul li a:visited {
 }
 
 header {
-    padding: 1em 0 0 0;
+    padding: 3.5rem 0 0 0;
     text-align: center;
     background: #637BC7 url('img/discordlogo_mod.svg') bottom right no-repeat;
 }
