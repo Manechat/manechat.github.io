@@ -185,24 +185,6 @@ table tr td:first-child{
 article.infocolumn > table > tbody > tr > td:nth-child(2){
     font-size: 0.8rem;
 }
-#bpm {
-    background: #222;
-    overflow: hidden;
-}
-#bpm h1 {
-    margin: 0.35em 0 0.25em 0;
-    font-size: 2.7rem;
-}
-#bpm article {
-    margin: 0 auto;
-    max-width: 800px;
-}
-#bpm .button img{
-    transform:translateY(2px);
-}
-#bpm .button img:first-child{
-    margin-left:20px;
-}
 #sb {
     background: #009D91;
     color: #FFF;
@@ -409,10 +391,6 @@ footer {
     margin-right: 4px;
 }
 
-#bpm article h1 .small {
-    display: none;
-}
-
 .slide{
     animation-name: slide;
     animation-duration: 4s;
@@ -506,13 +484,5 @@ footer {
     }
     #reddit article h1 {
         font-size: 2rem;
-    }
-}
-@media (max-width: 440px) {
-    #bpm article h1 .small {
-        display: inline;
-    }
-    #bpm article h1 .large {
-        display: none;
     }
 }
