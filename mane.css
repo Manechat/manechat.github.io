@@ -58,15 +58,26 @@ nav {
     left: 0;
     top: 0;
     right: 0;
+    height: 42px;
+    background-color: #26292e;
 }
 
 nav ul {
+    position: absolute;
     text-align: center;
     list-style-type: none;
+    height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #26292e;
     overflow: hidden;
+    transition: 500ms;
+}
+
+nav ul:first-child{
+    right: 50%;
+}
+nav ul:nth-child(3){
+    left: 50%;
 }
 
 nav ul p {
@@ -82,6 +93,7 @@ nav ul li .material-icons {
 }
 
 nav ul li {
+    height: 100%;
     font-size: 1.1rem;
     padding: 0.5rem;
     display: inline-block;
@@ -101,6 +113,32 @@ nav ul li a:hover {
 }
 nav ul li a:visited {
     color: #AAB;
+}
+nav img{
+    box-sizing: border-box;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    border-radius: 100%;
+    border: 5px solid #26292e;
+    visibility: hidden;
+    opacity: 0;
+    transform: translate(-50%, -15px);
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.scrolled ul:first-child{
+    transform: translate(-35px, 0);
+}
+.scrolled ul:nth-child(3){
+    transform: translate(35px, 0);
+}
+.scrolled img{
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, 5px)
 }
 
 header {
