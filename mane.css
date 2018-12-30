@@ -117,14 +117,14 @@ nav ul li a:visited {
 nav img{
     box-sizing: border-box;
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     left: 50%;
     border-radius: 100%;
     border: 5px solid #26292e;
     visibility: hidden;
     opacity: 0;
-    transform: translate(-50%, -15px);
+    transform: translate(-50%, 12px);
     transition: 500ms;
     cursor: pointer;
 }
@@ -138,7 +138,7 @@ nav img{
 .scrolled img{
     visibility: visible;
     opacity: 1;
-    transform: translate(-50%, 5px)
+    transform: translate(-50%, 2px);
 }
 
 header {
@@ -368,11 +368,10 @@ footer {
 }
 
 .button:hover {
-    box-shadow: 0px 2px 10px #111;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.4);
   
 }
 .button:active {
-    box-shadow: 0px 2px 10px #111;
     transition: all 30ms;
 }
 
@@ -421,7 +420,14 @@ footer {
 .cyan:active {
     background: #27556C;
 }
-.blur{filter:blur(20px)}
+.blur{
+    filter:blur(20px);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  
+}
 
 .oslogo {
     height: 16px;
