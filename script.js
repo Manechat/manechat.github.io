@@ -18,7 +18,7 @@ $(document).ready(function () {
     $('.modal-container').click(function (e) {
         if (e.target !== e.currentTarget) return;
         $('.modal-container').removeClass("modal-container-show");
-        $('html,body').css({ "overflow": "initial", "overflow-x": "hidden" });
+        $('html,body').css({ "overflow": "visible" });
     });
 
 	$(window).scroll(function () {
