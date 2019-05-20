@@ -310,7 +310,7 @@ footer {
 
 .modal-container{
     display: none;
-    z-index: 100;
+    z-index: 10000;
     position: fixed;
     justify-content: center;
     align-items: center;
