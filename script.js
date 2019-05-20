@@ -1,18 +1,25 @@
 $(document).ready(function () {
 	var scrollPosCheck;
 
-	$('#join-button').click(function () {
-		$('.modal').addClass("modal-show");
-		$('section,header,nav,footer').addClass("blur");
-		$('.button, nav, section a').css({ "pointer-events": "none" });
-		$('html,body').css({ "overflow": "hidden"});
-	});
-	$('section,header').mouseup(function () {
-		$('.modal').removeClass("modal-show");
-		$('section,header,nav,footer').removeClass("blur");
-		$('.button, nav, section a').css({ "pointer-events": "initial" });
-		$('html,body').css({ "overflow": "initial" });
-	});
+	/* load Discord invite link from invite.txt */
+    $.get('invite.txt', function (data) {
+        $(".modal").append(
+            '<a href="' + data + '" class="modal-link button cyan">join</a>'
+        );
+    });
+
+	/* open modal */
+    $('#join-button').click(function () {
+        $('.modal-container').addClass("modal-container-show");
+        $('html,body').css({ "overflow": "hidden" });
+    });
+
+    /* close modal */
+    $('.modal-container').click(function (e) {
+        if (e.target !== e.currentTarget) return;
+        $('.modal-container').removeClass("modal-container-show");
+        $('html,body').css({ "overflow": "initial", "overflow-x": "hidden" });
+    });
 
 	$(window).scroll(function () {
 		clearTimeout(scrollPosCheck);
