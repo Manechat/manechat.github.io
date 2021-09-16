@@ -1,210 +1,244 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Manechat Discord Server</title>
-  
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="description" content="Manechat Discord Server Homepage" />
-    <meta name="keywords" content="mlp,my little pony,fim,discord,server,manechat,friendship is magic,brony,pegasister,chat,chatroom,community">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <meta name="theme-color" content="#26292e">
-    <link rel="icon" href="img/oclogo.jpg">
-
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Manechat" />
-    <meta name="twitter:description" content="My Little Pony Discord Server" />
-    <meta name="twitter:image" content="https://i.imgur.com/syDnE55.jpg" />
-    
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="mane.css">
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+	<meta charset="UTF-8">
+	<title>Manechat Discord Server</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+	<meta name="description" content="Manechat Discord Server Homepage" />
+	<meta name="keywords" content="mlp,my little pony,fim,discord,server,manechat,friendship is magic,brony,pegasister,chat,chatroom,community">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+	<meta name="theme-color" content="#26292e">
+	<link rel="icon" href="img/oclogo.jpg">
+	<meta name="twitter:card" content="summary" />
+	<meta name="twitter:title" content="Manechat" />
+	<meta name="twitter:description" content="My Little Pony Discord Server" />
+	<meta name="twitter:image" content="https://i.imgur.com/syDnE55.jpg" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" href="mane.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li id="nav_rules"><a href="#rules"><i class="material-icons">announcement</i> <p>Rules</p></a></li>
-            <li id="nav_info"><a href="#info"><i class="material-icons">info</i> <p>Info</p></a></li>
-        </ul>
-            <img src="img/oclogo.jpg"></img>
-        <ul>
-            <li id="nav_sb"><a href="#sb"><i class="material-icons">code</i> <p>Sweetiebot</p></a></li>
-            <li id="nav_reddit"><a href="#reddit"><i class="material-icons">swap_vert</i> <p>Reddit</p></a></li>
-        </ul>
-    </nav>
-    
-    <header id="home">
-        <article>
-            <img src="img/oclogo.jpg"></img>
-            <div class="discordlogo"></div>
-            <h1>Manechat</h1>
-            <h2>My Little Pony Discord Server</h2>
-        </article>
-        <br/>
-        <div class="button green" id="join-button">Click Here to Join!</div>
-    </header>
-
-    <div class="modal-container">
-        <div class="modal">
-            <div class="modal-text">
-                I hereby confirm to have read the rules below and will follow them.
-                I am also aware that not doing so might result in a permanent ban from the server.
-            </div>
-        </div>
-    </div>
-
-    <section id="rules">
-    <article>
-        <h1>Rules</h1>
-        <p>Welcome to Manechat! Keep it family friendly and SFW. Breaking the rules will result in being muted, kicked, or banned. Fundamentally, our rules are mostly the same as the /r/mylittlepony subreddit rules, subject to moderator discretion.</p>
-        
-        <ol>
-            <li>Be pony-like and kind to other members.
-            <ol type="a">
-                <li>Trolling, impersonation, and similar acts are not acceptable!</li>
-                <li>Follow common courtesy in voice chat. Keep it SFW, do not disturb in-progress games with off-topic chatter, and properly calibrate your microphone.</li>
-                <li>Users that consistently create negative experiences for other users will be removed, even if no singular event would be considered severe.</li>
-            </ol>
-            </li>
-            
-            <li>No offensive/controversial/nsfw avatars, pictures, emotes, or topics. This means no politics or religion.</li>
-            
-            <li>All discussion, pictures, and any related content about the currently airing or next upcoming episode must be kept in the appropriately named spoiler channel (<span class="channel_name">#mlp-sXeXX</span>) until 48 hours after the <strong>end of the episode's Discovery Family airing</strong>, even if it may have leaked earlier. All other spoiler content goes in <span class="channel_name">#mlp-spoilers</span>.
-            <ol type="a">
-                <li>Do not carelessly spoil important plot points of any media <strong>in general</strong>, regardless of its age.</li>
-            </ol>
-            </li>
-            
-            <li>Shitposting, spamming, and low-effort memes are prohibited. Don’t use excessively illegible characters in usernames or text.
-            <ol type="a">
-                <li>Do not exercise excessive roleplay anywhere on the server. This is not the place for RP.</li>
-            </ol>
-            </li>
-            
-            <li>Links to other Discord servers, patreons, gofundmes and similar are not allowed. This includes PMing members of the server with spam.
-                <ol type="a">
-                    <li>Links to streams, channels, and other self-promotion should be posted only once per 24 hours</li>
-                    <li>Advertising commissions, YCHs, and other art related services in exchange for money should be kept to #mylittlecreativity and no more often than once a week. (posting your own creations is exempt, but should not be spammed.)</li>
-                    <li>Please consider contacting a Princess if someone on the server, without asking for it, PMs you with links of advertisement, publicity, self-promotion or similar.</li>
-                </ol>
-                </li>
-            
-            <li>We are not a support group. If you need help, please visit the <a href="https://www.reddit.com/r/mylittlesupportgroup">My Little Support Group subreddit</a> or contact a local professional in your area.
-                <br/>
-                <a href="https://www.reddit.com/r/SuicideWatch/wiki/hotlines">International List of Crisis Hotlines</a>.
-            </li>
-        </ol>
-        
-        <p>Do not enforce the rules or try to regulate behaviour, that is exclusively the princesses' responsibility. If you think or feel a rule is being breached, or you have concerns, PM a princess without worry.</p>
-        
-        <p><strong>All Princess decisions are final.</strong>
-            <ul>
-                <li>Princesses have full discretion to remove content or users deemed unpleasant or unwelcomed by community members.</li>
-                <li>Princesses have full discretion to change channel topics.</li>
-            </ul>
-        </p>
-    
-        <p>Respect <a href="https://discordapp.com/tos">Discord's Terms of Service</a>.</p>
-        
-        <p>Abusing or exploiting bugs in Sweetie Bot or Discord itself is a bannable offense.</p>
-
-        <p>If you'd like to appeal a ban or otherwise communicate with the Princesses outside of Discord, you can <a href="https://www.reddit.com/message/compose?to=%2Fr%2FManechatDiscord&subject=&message=">send a private message to us</a> on Reddit.</p>
-            
-    </article>
-    </section>
-
-    <section id="info">
-    <article>
-        <h1>Info</h1>
-        <img id="twismile" src="img/twismile_bg.png" />
-        <article id="channels" class="infocolumn">
-            <h2>Channels</h2>
-
-            <p>Certain channels are used for certain activities and discussions. Temporary channels may be created for certain events. <strong>Do not</strong> clutter the general chat with content that belongs somewhere else.<br>
-                <table>
-                    <tr><td><span class="channel_name">#manechat</span></td> <td>General discussion.</td> </tr>
-                    <tr><td><span class="channel_name">#overflow</span></td> <td>General discussion channel #2 for when #manechat becomes overcrowded.</td> </tr>
-                    <tr><td><span class="channel_name">#announcements</span></td> <td>Important server announcements are posted here.</td> </tr>
-                    <tr><td><span class="channel_name">#mlp-comics</span></td> <td>For the ongoing Manechat re-read of the comics.</td> </tr>
-                    <tr><td><span class="channel_name">#mylittletheory</span></td> <td>Spoiler-free lore, story, theories, and/or criticisms about MLP.</td> </tr>
-                    <tr><td><span class="channel_name">#mylittlebot</span></td> <td>Play with Sweetie Bot here.</td> </tr>
-                    <tr><td><span class="channel_name">#mlp-sXeXX</span></td> <td>Spoilers channel to discuss the new or next upcoming episode, and the comics, movies, books, and other media surrounding it.</td> </tr>
-                    <tr><td><span class="channel_name">#mlp-spoilers</span></td> <td>This channel is for anything starting from S9 and onwards. User discretion is advised.</td> </tr>
-                    <tr><td><span class="channel_name">#nonmlp-spoilers</span></td> <td>Any and all spoilers regarding anything non-MLP go here. User discretion is advised.</td> </tr>
-                    <tr><td><span class="channel_name">#mylittleactivities</span></td> <td>Gaming, Fanfic Reading reactions and TSSSF.</td> </tr>
-                    <tr><td><span class="channel_name">#mylittlenerds</span></td> <td>Technical discussions on computer science, math, engineering, and science in general.</td> </tr>
-                    <tr><td><span class="channel_name">#mylittlecreativity</span></td> <td>For focused discussion on your own creative endeavors.</td> </tr>
-                    <tr><td><span class="channel_name">#mylittleevents</span></td> <td>Convention meetups and discussion.</td> </tr>              
-                </table>
-            </p>
-
-        </article>
-        <article id="groups" class="infocolumn">
-            <h2>Groups</h2>
-    
-            <p>We also have many groups you can join for news, organization of events, and coordination of group play.</p>
-            <p>To join a group, type <code>!joingroup <group></code> in <span class="channel_name">#mylittlebot</span></p>
-            <p>
-                <table>
-                    <tr>
-                        <td><span class="group_name">Gaming</span></td>
-                        <td>Factorio, GTA:O, Hearthstone, HotS, League, Minecraft, osu!, Overwatch, Overwatch NA, Overwatch EU, PUBG, starbound, TF2, themfightingherds, Titanfall, Warframe, WoW</td>
-                    </tr>
-                    <tr>
-                        <td><span class="group_name">Card games</span></td>
-                        <td>TSSSF, MLPCCG, MTG</td>
-                    </tr>
-                    <tr>
-                        <td><span class="group_name">Media</span></td>
-                        <td>Anime, artist, fanfic, The Daily EG, writers</td>
-                    </tr>
-                    <tr>
-                        <td><span class="group_name">Conventions</span></td>
-                        <td>BabsCon, BronyCon, EFNW, FillyCon, GalaCon, NightmareNights</td>
-                    </tr>
-                    <tr>
-                        <td><span class="group_name">Roleplay</span></td>
-                        <td>Roleplayers, Ponyfinder, D&amp;D</td>
-                    </tr>
-                </table>
-            </p>
-        </article>
-    </article>
-    </section>
-    
-    <section id="sb">
-    <article>
-    <span>
-        <img src="img/sweetiebot.svg" alt="Avatar" title="Sweetie Bot" style="height: 180px; width: 180px;" />
-        <h1>Sweetie <span>bot</span></h1>
-        <div class="pad">An open source administration bot for Manechat, now available for your own server!
-            <br/>
-            <div class="button cyan"><i class="material-icons">add</i><a href="https://discordapp.com/oauth2/authorize?client_id=171790139712864257&scope=bot&permissions=535948390">Add To Server</a></div>
-            <div class="button blue"><i class="material-icons">info</i><a href="https://sweetiebot.io/">More Info</a></div>
-        </div>
-    </span>
-    </article>
-    </section>
-
-    <section id="reddit">
-    <article>
-        <div class="pad">
-            <h1>/r/ManechatDiscord</h1>
-            <p>Want to post Manechat-related nonsense or contact us outside of Discord? Come visit/subscribe to <a href="https://www.reddit.com/r/ManechatDiscord/">our subreddit</a>!</p>
-        </div>
-        <img src="img/snoo.png" alt="Snoo" />
-    </article>
-    </section>
-    
-    <footer>
-        <p>Last updated: Jan 25, 2021</p>
-        <p>Design by: <a href="https://github.com/blackhole12/">Cloud Hop</a>, <a href="https://github.com/deltaphc">DeltaPHC</a></p>
-    </footer>
-    
+	<nav>
+		<ul>
+			<li id="nav_rules"><a href="#rules"><i class="material-icons">announcement</i> <p>Rules</p></a></li>
+			<li id="nav_info"><a href="#info"><i class="material-icons">info</i> <p>Info</p></a></li>
+		</ul>
+		<img src="img/oclogo.jpg" alt="Manechat OC Logo">
+		<ul>
+			<li id="nav_sb"><a href="#sb"><i class="material-icons">code</i> <p>Sweetiebot</p></a></li>
+			<li id="nav_reddit"><a href="#reddit"><i class="material-icons">swap_vert</i> <p>Reddit</p></a></li>
+		</ul>
+	</nav>
+	<header id="home">
+		<article>
+			<img src="img/oclogo.jpg" alt="Manechat OC Logo">
+			<div class="discordlogo"></div>
+			<h1>Manechat</h1>
+			<h2>My Little Pony Discord Server</h2>
+		</article>
+		<br>
+		<div class="button green" id="join-button">Click Here to Join!</div>
+	</header>
+	<div class="modal-container">
+		<div class="modal">
+			<div class="modal-text">
+				I hereby confirm to have read the rules below and will follow them.
+				I am also aware that not doing so might result in a permanent ban from the server.
+			</div>
+		</div>
+	</div>
+	<section id="rules">
+		<article>
+			<h1>Rules</h1>
+			<p>Welcome to Manechat! Keep it family friendly and SFW. Breaking the rules will result in being muted, kicked, or banned. Fundamentally, our rules are mostly the same as the /r/mylittlepony subreddit rules, subject to moderator discretion.</p>
+			<ol>
+				<li>Be pony-like and kind to other members.
+					<ol type="a">
+						<li>Trolling, impersonation, and similar acts are not acceptable!</li>
+						<li>Follow common courtesy in voice chat. Keep it SFW, do not disturb in-progress games with off-topic chatter, and properly calibrate your microphone.</li>
+						<li>Users that consistently create negative experiences for other users will be removed, even if no singular event would be considered severe.</li>
+					</ol>
+				</li>
+				<li>No offensive, controversial, or NSFW avatars, pictures, emotes, or topics. This means no politics or religion.</li>
+				<li>All discussion, pictures, and any related content about the upcoming My Little Pony: A New Generation movie must be kept in the appropriately named spoiler channel <span class="channel_name">#g5-spoilers-leaks</span>. If it was shown in the trailer you can also use <span class="channel_name">#g5-trailer</span>.
+					<ol type="a">
+						<li>MLP content that airs ahead of time is considered spoilers, even if it comes from an official source.<br><i>Examples: G5 movie airs in Hong Kong before Netflix release, or a book comes out that spoils the plot of an unreleased movie/episode</i></li>
+						<li>Do not carelessly spoil important plot points of any media <strong>in general</strong>, regardless of its age.</li>
+					</ol>
+				</li>
+				<li>Shitposting, spamming, and low-effort memes are prohibited. Don't use excessively illegible characters in usernames or text.
+					<ol type="a">
+						<li>Do not exercise excessive roleplay anywhere on the server. This is not the place for RP.</li>
+					</ol>
+				</li>
+				<li>Links to other Discord servers, patreons, gofundmes and similar are not allowed. This includes PMing members of the server with spam.
+					<ol type="a">
+						<li>Links to streams, channels, and other self-promotion should be posted only once per 24 hours.</li>
+						<li>Advertising commissions, YCHs, and other art related services in exchange for money should be kept to <span class="channel_name">#my-creations</span> and no more often than once a week.</li>
+						<li>Please consider contacting a Princess if someone on the server, without asking for it, PMs you with links of advertisement, publicity, self-promotion or similar.</li>
+					</ol>
+				</li>
+				<li>We are not a support group. If you need help, please seek out the help of a professional in your area.<br><a href="https://www.reddit.com/r/SuicideWatch/wiki/hotlines">International List of Crisis Hotlines</a>
+				</li>
+			</ol>
+			<p>Do not enforce the rules or try to regulate behaviour, that is exclusively the Princesses' responsibility. If you think or feel a rule is being breached, or you have concerns, PM a Princess without worry.</p>
+			<p><strong>All Princess decisions are final.</strong></p>
+			<ul>
+				<li>Princesses have full discretion to remove content or users deemed unpleasant or unwelcomed by community members.</li>
+				<li>Princesses have full discretion to change channel topics.</li>
+			</ul>
+			<p>Respect <a href="https://discordapp.com/tos">Discord's Terms of Service</a>.</p>
+			<p>Abusing or exploiting bugs in Sweetie Bot or Discord itself is a bannable offense.</p>
+			<p>If you'd like to appeal a ban or otherwise communicate with the Princesses outside of Discord, you can <a href="https://www.reddit.com/message/compose?to=%2Fr%2FManechatDiscord">send a private message to us</a> on Reddit.</p>
+		</article>
+	</section>
+	<section id="info">
+		<article>
+			<h1>Info</h1>
+			<img id="twismile" src="img/twismile_bg.png" alt="Twilight Sparkle">
+			<article id="channels" class="infocolumn">
+				<h2>Channels</h2>
+				<p>Certain channels are used for certain activities and discussions. Temporary channels may be created for certain events. <strong>Do not</strong> clutter the general chat with content that belongs somewhere else.</p>
+				<table>
+					<tr>
+						<td><span class="channel_name">#announcements</span></td>
+						<td>The Princesses use this channel to communicate important information. If there's a new message make sure to read it.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#manechat</span></td>
+						<td>The main channel for general purpose.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#tailchat</span></td>
+						<td>The second channel for when <span class="channel_name">#manechat</span> is too busy for you.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#covid-19-quarantine</span></td>
+						<td>For discussion that relates to the COVID-19 pandemic.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#server-feedback</span></td>
+						<td>For discussing Manechat, possible changes to it, and the server's direction for the future.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#bots-channel</span></td>
+						<td>For playing with and abusing the bot.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#rewatch-XX</span></td>
+						<td>For focused discussion of our rewatch streams.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#mlp-theory</span></td>
+						<td>For discussion of lore, story, or theories involving MLP.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#g5-trailer</span></td>
+						<td>For discussing anything shown within the trailer, and spoiler-free discussion of the upcoming movie.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#g5-spoilers-leaks</span></td>
+						<td>For spoilers and leaks of anything that comes after G4. User discretion is advised.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#spoilers-nonmlp</span></td>
+						<td>Spoiler channel for media that isn't MLP.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#gaming</span></td>
+						<td>For talking about video games, tabletop games, card games and the like.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#science-and-tech</span></td>
+						<td>For conversations about hardware, software, math, science and such.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#my-creations</span></td>
+						<td>To share, comment and discuss the creative project you are working on.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#fanfics-and-comics</span></td>
+						<td>For fanfics and comics, also where the Reading Club has its discussions.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#events</span></td>
+						<td>For conventions and other events.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#booru-site</span></td>
+						<td>For anything related to our image booru site, <a href="https://manebooru.art/">Manebooru</a>. Server rules apply, especially Rule 2.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#booru-support</span></td>
+						<td>If you need help with anything Manebooru related from the staff.</td>
+					</tr>
+					<tr>
+						<td><span class="channel_name">#voice-text-chat</span></td>
+						<td>Use this when responding to VC.</td>
+					</tr>
+				</table>
+			</article>
+			<article id="groups" class="infocolumn">
+				<h2>Groups</h2>
+				<p>We also have many groups you can join for news, organization of events, and coordination of group play.</p>
+				<p>To join a group, check the latest pin in <span class="channel_name">#bots-channel</span> and react to the roles you would like to join.</p>
+				<table>
+					<tr>
+						<td><span class="group_name">Group</span></td>
+						<td>Bracket Voter, Daily Horsebandos, Daily Horsetunes, Daily Lyra, Events, FRIIDAAYY VIIBEES!!!, GETTING SWOLE WITH NITEAX, Launch Watch, Manechat Stream, No Covid, No Rules, Professor Cinemas, Romulus Reacts, The Daily EG, Voice Friday, Badges</td>
+					</tr>
+					<tr>
+						<td><span class="group_name">Games</span></td>
+						<td>Animal Crossing, Among Us, CSGO, Factorio, Fallout76, FFXIV, Fortnite, Genshin Impact, GTA:O, Hearthstone, Jackbox, Minecraft, Overwatch, R6Siege, Smash Bros, Tabletop Simulator, TF2, TFH, Warframe, WoW</td>
+					</tr>
+					<tr>
+						<td><span class="group_name">Cards</span></td>
+						<td>Cards Against Equestria, MLPCCG, MtG, TSSSF</td>
+					</tr>
+					<tr>
+						<td><span class="group_name">Media</span></td>
+						<td>Anime, Art Challenge, Artists, Comic Club, Fanfic, Fanfic Club, Karaoke, Musicians, Writers</td>
+					</tr>
+					<tr>
+						<td><span class="group_name">Convention</span></td>
+						<td>BabsCon, BronyCon, EFNW, FillyCon, GalaCon, HarmonyCon, PVCF</td>
+					</tr>
+					<tr>
+						<td><span class="group_name">Roleplay</span></td>
+						<td>Ponyfinder, Roleplayers, D&amp;D</td>
+					</tr>
+				</table>
+			</article>
+		</article>
+	</section>
+	<section id="sb">
+		<article>
+		<span>
+			<img src="img/sweetiebot.svg" alt="Avatar" title="Sweetie Bot" style="height: 180px; width: 180px;" />
+			<h1>Sweetie <span>bot</span></h1>
+			<div class="pad">An open source administration bot for Manechat, now available for your own server!
+				<br>
+				<div class="button cyan"><i class="material-icons">add</i><a href="https://discordapp.com/oauth2/authorize?client_id=171790139712864257&scope=bot&permissions=535948390">Add To Server</a></div>
+				<div class="button blue"><i class="material-icons">info</i><a href="https://sweetiebot.io/">More Info</a></div>
+			</div>
+		</span>
+		</article>
+	</section>
+	<section id="reddit">
+		<article>
+			<div class="pad">
+				<h1>/r/ManechatDiscord</h1>
+				<p>Want to post Manechat-related nonsense or contact us outside of Discord? Come visit/subscribe to <a href="https://www.reddit.com/r/ManechatDiscord/">our subreddit</a>!</p>
+			</div>
+			<img src="img/snoo.png" alt="Snoo" />
+		</article>
+	</section>
+	<footer>
+		<p>Last updated: Sep 15, 2021</p>
+		<p>Design by: <a href="https://github.com/blackhole12/">Cloud Hop</a>, <a href="https://github.com/deltaphc">DeltaPHC</a></p>
+	</footer>
 </body>
 </html>
