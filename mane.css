@@ -132,7 +132,7 @@ nav img{
 .scrolled ul:first-child{
     transform: translate(-35px, 0);
 }
-.scrolled ul:nth-child(3){
+.scrolled ul:last-child{
     transform: translate(35px, 0);
 }
 .scrolled img{
